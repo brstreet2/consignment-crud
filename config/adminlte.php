@@ -322,7 +322,7 @@ return [
                 [
                     'icon'  => 'fas fa-fw fa-image',
                     'text'  => 'Banner',
-                    'url'   => '/create'
+                    'url'   => '/banner'
                 ]
             ]
         ],

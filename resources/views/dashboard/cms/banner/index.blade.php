@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Posts')
+@section('title', 'Banner')
 
 @section('content_header')
-    <h1>Posts</h1>
-    <a href="{{ route('posts.create') }}" class="btn btn-primary">Create Post</a>
+    <h1>Banner</h1>
+    <a href="{{ route('banner.create') }}" class="btn btn-primary">Create Banner</a>
 @stop
 
 @section('content')
@@ -14,30 +14,67 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
-        <tr>
-            <th>No</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th width="280px">Action</th>
-        </tr>
-        @foreach ($posts as $post)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $post->title }}</td>
-                <td>{{ $post->content }}</td>
-                <td>
-                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('posts.show', $post->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('posts.edit', $post->id) }}">Edit</a>
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
-    </table>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped" id="banner-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th width="280px">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+@stop
 
-    {!! $posts->links() !!}
+@section('css')
+    <link rel="stylesheet" href="{{ asset('vendor/datatables/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/datatables/css/buttons.bootstrap4.min.css') }}">
+@stop
+
+@section('js')
+    <script src="{{ asset('vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/jszip.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/js/buttons.colVis.min.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            var table = $('#banner-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('banner.index') }}",
+                columns: [{
+                        data: 'DT_RowIndex',
+                        name: 'DT_RowIndex'
+                    },
+                    {
+                        data: 'title',
+                        name: 'title'
+                    },
+                    {
+                        data: 'content',
+                        name: 'content'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ],
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
+                ]
+            });
+        });
+    </script>
 @stop
