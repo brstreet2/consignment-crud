@@ -29,12 +29,12 @@ class ProductController extends Controller
                 ->make(true);
         }
 
-        return view('dashboard.cms.product.index');
+        return view('dashboard.cms.top-up.index');
     }
 
     public function create()
     {
-        return view('dashboard.cms.product.create');
+        return view('dashboard.cms.top-up.create');
     }
 
     public function store(Request $request)

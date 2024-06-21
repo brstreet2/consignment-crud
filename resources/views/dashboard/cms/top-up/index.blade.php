@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Product')
+@section('title', 'Top-Up Product')
 
 @section('content_header')
-    <h1>Product</h1>
-    <a href="{{ route('product.create') }}" class="btn btn-primary">Create Product</a>
+    <h1>Top-Up Product</h1>
+    <a href="{{ route('top-up.create') }}" class="btn btn-primary">Create Product</a>
 @stop
 
 @section('content')
@@ -51,7 +51,7 @@
             var table = $('#product-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('product.index') }}",
+                ajax: "{{ route('top-up.index') }}",
                 columns: [{
                         data: 'DT_RowIndex',
                         name: 'DT_RowIndex'

@@ -326,8 +326,8 @@ return [
                 ],
                 [
                     'icon'  => 'fas fa-fw fa-image',
-                    'text'  => 'Product',
-                    'url'   => '/product'
+                    'text'  => 'Top-up',
+                    'url'   => '/top-up'
                 ]
             ]
         ],

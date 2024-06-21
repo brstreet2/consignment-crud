@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Create Product')
+@section('title', 'Create Top-Up Product')
 
 @section('content_header')
-    <h1>Create Product</h1>
+    <h1>Create Top-Up Product</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
         </div>
     @endif
 
-    <form action="{{ route('product.store') }}" method="POST">
+    <form action="{{ route('top-up.store') }}" method="POST">
         @csrf
 
         <div class="row">

@@ -18,7 +18,7 @@ Route::get('/settings', [App\Http\Controllers\SettingsController::class, 'index'
 
 Route::resource('banner', App\Http\Controllers\CMS\BannerController::class);
 
-Route::resource('product', App\Http\Controllers\CMS\ProductController::class);
+Route::resource('top-up', App\Http\Controllers\CMS\ProductController::class);
 
 // Route::group(['prefix' => 'banner'], function () {
 //     Route::get('', [App\Http\Controllers\CMS\BannerController::class, 'index'])->name('banner.index');
