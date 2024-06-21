@@ -323,6 +323,11 @@ return [
                     'icon'  => 'fas fa-fw fa-image',
                     'text'  => 'Banner',
                     'url'   => '/banner'
+                ],
+                [
+                    'icon'  => 'fas fa-fw fa-image',
+                    'text'  => 'Product',
+                    'url'   => '/product'
                 ]
             ]
         ],
