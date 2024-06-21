@@ -13,7 +13,7 @@
             <div class="card card-primary card-outline">
                 <div class="card-body box-profile">
                     <div class="text-center">
-                        <img class="profile-user-img img-fluid img-circle" src="{{ asset('images/default-profile.png') }}"
+                        <img class="profile-user-img img-fluid img-circle" src="{{ asset('assets/logo/logo.png') }}"
                             alt="User profile picture">
                     </div>
 
@@ -40,7 +40,7 @@
                             <!-- Post -->
                             <div class="post">
                                 <div class="user-block">
-                                    <img class="img-circle img-bordered-sm" src="{{ asset('images/default-profile.png') }}"
+                                    <img class="img-circle img-bordered-sm" src="{{ asset('assets/logo/logo.png') }}"
                                         alt="user image">
                                     <span class="username">
                                         <a href="#">Jonathan Burke Jr.</a>
