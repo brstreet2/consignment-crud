@@ -7,7 +7,7 @@ use App\Models\Banner;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
-class ProductController extends Controller
+class BuyAccountController extends Controller
 {
     public function index(Request $request)
     {
@@ -29,12 +29,12 @@ class ProductController extends Controller
                 ->make(true);
         }
 
-        return view('dashboard.cms.top-up.index');
+        return view('dashboard.cms.buy-account.index');
     }
 
     public function create()
     {
-        return view('dashboard.cms.top-up.create');
+        return view('dashboard.cms.buy-account.create');
     }
 
     public function store(Request $request)

@@ -328,7 +328,12 @@ return [
                     'icon'  => 'fas fa-fw fa-image',
                     'text'  => 'Top-up',
                     'url'   => '/top-up'
-                ]
+                ],
+                [
+                    'icon'  => 'fas fa-fw fa-image',
+                    'text'  => 'Buy-account',
+                    'url'   => '/buy-account'
+                ],
             ]
         ],
         [
