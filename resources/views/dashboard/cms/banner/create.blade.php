@@ -24,6 +24,13 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Image:</strong>
+                    <input type="file" name="image" accept="image/*" onchange="loadFile(event)"><br>
+                    <img id="output"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Title:</strong>
                     <input type="text" name="title" class="form-control" placeholder="Title">
                 </div>
@@ -39,4 +46,14 @@
             </div>
         </div>
     </form>
+
+    <script>
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+    </script>
 @stop
