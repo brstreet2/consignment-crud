@@ -325,12 +325,12 @@ return [
                     'url'   => '/banner'
                 ],
                 [
-                    'icon'  => 'fas fa-fw fa-image',
+                    'icon'  => 'fas fa-wallet mx-1',
                     'text'  => 'Top-up',
                     'url'   => '/top-up'
                 ],
                 [
-                    'icon'  => 'fas fa-fw fa-image',
+                    'icon'  => 'fas fa-dollar-sign mx-1',
                     'text'  => 'Buy-account',
                     'url'   => '/buy-account'
                 ],
