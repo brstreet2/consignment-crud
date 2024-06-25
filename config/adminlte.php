@@ -320,19 +320,32 @@ return [
             'label_color' => 'success',
             'submenu' => [
                 [
-                    'icon'  => 'fas fa-fw fa-image',
+                    'icon'  => 'fas fa-fw fa-image ml-4',
                     'text'  => 'Banner',
                     'url'   => '/banner'
                 ],
                 [
-                    'icon'  => 'fas fa-wallet mx-1',
+                    'icon'  => 'fas fa-wallet mx-1 ml-4',
                     'text'  => 'Top-up',
                     'url'   => '/top-up'
                 ],
                 [
-                    'icon'  => 'fas fa-dollar-sign mx-1',
+                    'icon'  => 'fas fa-dollar-sign mx-2 ml-4',
                     'text'  => 'Buy-account',
                     'url'   => '/buy-account'
+                ],
+            ]
+        ],
+        [
+            'text'  => 'User',
+            'icon'  => 'fa fa-user mx-1',
+            'label' => 'Page',
+            'label_color' => 'success',
+            'submenu' => [
+                [
+                    'icon'  => 'fa fa-eye ml-4',
+                    'text'  => 'User Detail',
+                    'url'   => '/users'
                 ],
             ]
         ],

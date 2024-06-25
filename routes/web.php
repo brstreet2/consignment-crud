@@ -22,6 +22,9 @@ Route::resource('top-up', App\Http\Controllers\CMS\TopUpController::class);
 
 Route::resource('buy-account', App\Http\Controllers\CMS\BuyAccountController::class);
 
+Route::resource('users', App\Http\Controllers\CMS\UsersController::class);
+
+
 // Route::group(['prefix' => 'banner'], function () {
 //     Route::get('', [App\Http\Controllers\CMS\BannerController::class, 'index'])->name('banner.index');
 //     Route::post('/create', [App\Http\Controllers\CMS\BannerController::class, 'create'])->name('banner.create');
